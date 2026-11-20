@@ -174,8 +174,9 @@ def draw_hormuz(d, x, y, w, h):
     d.rectangle([x + 70, y + h - 28, x + w - 70, y + h - 20], fill=(214, 196, 168))
     for cx in range(x + 76, x + w - 76, 24):
         d.rectangle([cx, y + h - 27, cx + 18, y + h - 21], fill=(31, 68, 110))
-    # mine buoys
-    for mx in (x + 16, x + w - 22):
+    # mine buoys (right buoy moved left: it sat at x+302, 2px from the
+    # Crimea panel's caption "R"; now 26px clear, still in the art band)
+    for mx in (x + 16, x + w - 46):
         d.ellipse([mx - 6, y + h - 9, mx + 6, y + h + 1], fill=(30, 30, 32))
         for ang in range(0, 360, 45):
             ex = mx + 8 * math.cos(math.radians(ang))
