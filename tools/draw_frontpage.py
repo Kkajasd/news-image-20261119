@@ -164,6 +164,7 @@ def draw_ipo(d, x, y, w, h):
 
 def draw_hormuz(d, x, y, w, h):
     """Tanker on a strait with mine buoys; fits inside the box."""
+    h -= 10  # shrink art so the buoys/spikes clear the caption below
     d.rectangle([x, y, x + w, y + h], fill=(196, 224, 236))
     d.rectangle([x, y + h - 10, x + w, y + h], fill=SEA)
     # tanker hull
